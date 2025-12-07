@@ -12,6 +12,12 @@ int main()
     std::cout << "Enter the name: ";
     std::cin >> name;
 
+    if (name.empty() || N <= 0)
+    {
+        std::cout << "N must be a positive number" << std::endl;
+        return 1;
+    }
+
     Zombie *zombies = zombieHorde(N, name);
 
     if (zombies == NULL)
@@ -23,4 +29,5 @@ int main()
     }
 
     delete[] zombies;
+    return 0;
 }

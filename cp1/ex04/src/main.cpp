@@ -28,13 +28,14 @@ int main(int argc, char *argv[])
     std::string newString = argv[3];
 
     std::ifstream inFile(filename.c_str());
-    std::ofstream outFile(newFileName.c_str());
 
     if (!inFile)
     {
         std::cerr << "file: " << filename << " doesnt exists" << std::endl;
         return 1;
     }
+
+    std::ofstream outFile(newFileName.c_str());
 
     std::string line;
     while (std::getline(inFile, line))
