@@ -1,0 +1,11 @@
+# Build
+build/
+*.o
+
+# Binaries
+ScalarConverter
+Serializer
+Identify
+
+# OS
+.DS_Store
